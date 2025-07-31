@@ -12,5 +12,11 @@ TargetId = NewType("TargetId", UUID)
 
 
 class BaseEntity(BaseModel):
-    id: UUID = Field(default_factory=uuid4)
-    date_created: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    id: UUID = Field(
+        default_factory=uuid4,
+        description="The unique identifier for the entity.",
+    )
+    date_created: datetime = Field(
+        default_factory=lambda: datetime.now(timezone.utc),
+        description="The date and time the entity was created.",
+    )
