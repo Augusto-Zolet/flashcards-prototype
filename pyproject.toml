@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "flashcards"
+version = "0.1.0"
+description = "A CLI flashcard app"
+authors = ["Gemini"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic = {extras = ["email"], version = "^2.8.2"}
+rich = "^13.7.1"
+typer = "^0.12.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+ruff = "^0.4.10"
+black = "^24.4.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
